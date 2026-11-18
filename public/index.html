@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Projeteklif · Metraj ve maliyet, cebinde</title>
+<meta name="description" content="Usta ve taşeron için telefondan metraj, maliyet ve teklif. DWG, DXF, RAR ve ZIP proje dosyasını okur; prizden betona kalemleri tabloya döker, kendi fiyat listenle maliyeti çıkarır, PDF ve Excel teklif hazırlar.">
+<meta name="theme-color" content="#1F1B16">
+<meta property="og:title" content="Projeteklif · Metraj ve maliyet, cebinde">
+<meta property="og:description" content="Projeni yükle, metrajı ve maliyeti çıksın. Kendi fiyatınla PDF ve Excel teklif, telefonundan.">
+<meta property="og:url" content="https://projeteklif.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:image" content="https://projeteklif.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://projeteklif.app/">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Projeteklif","url":"https://projeteklif.app/","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Android","inLanguage":"tr","description":"Telefondan metraj, maliyet ve teklif: DWG, DXF, RAR ve ZIP proje dosyası okuma, fiyat listesi eşleştirme, PDF ve Excel teklif."}
+</script>
+<style>
+/* Açılış bandı: uygulamanın koyu kartı gibi; sağda silik tuğla duvar (logodaki duvar). */
+.hero{background:var(--dark);color:#FFFFFF;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0 0 0 auto;width:min(560px,48%);pointer-events:none;opacity:.7;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='74' height='40'%3E%3Crect x='0' y='0' width='34' height='17' rx='2' fill='%2333251C'/%3E%3Crect x='37' y='0' width='34' height='17' rx='2' fill='%233A2A20'/%3E%3Crect x='-18' y='20' width='34' height='17' rx='2' fill='%233A2A20'/%3E%3Crect x='19' y='20' width='34' height='17' rx='2' fill='%2333251C'/%3E%3Crect x='56' y='20' width='34' height='17' rx='2' fill='%233A2A20'/%3E%3C/svg%3E");
+  -webkit-mask-image:linear-gradient(to left,#000 35%,transparent 100%);mask-image:linear-gradient(to left,#000 35%,transparent 100%)}
+.hero .site-head,.hero-grid{position:relative}
+.hero .brand{color:#FFFFFF}
+.hero .brand small{color:var(--on-dark-muted)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px;align-items:center;padding-block:24px 56px}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr;gap:34px;padding-block:8px 44px}}
+.hero-text{display:grid;gap:18px;justify-items:start}
+.hero h1{font-size:clamp(36px,6.2vw,62px);margin:0;max-width:13ch}
+.hero h1 em{font-style:normal;color:var(--accent-on-dark)}
+.hero .lead{font-size:clamp(16px,1.9vw,18.5px);color:var(--on-dark);margin:0;max-width:50ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;letter-spacing:.03em;color:var(--on-dark)}
+.soon{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--accent);color:#FFFFFF;border-radius:16px;padding:14px 22px;font-weight:800;font-size:17px;min-height:52px}
+.soon span{font-weight:600;font-size:14px;opacity:.9}
+.hero-link{color:var(--on-dark);font-weight:700;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.hero-phones{display:flex;justify-content:center;align-items:flex-end;gap:0;min-width:0}
+.hero-phones .tel{width:min(46%,250px)}
+.hero-phones .tel:first-child{transform:translateY(-24px) rotate(-3deg);margin-right:-22px;z-index:1}
+.hero-phones .tel:last-child{transform:translateY(14px) rotate(2.5deg)}
+
+/* Cihaz çerçeveleri */
+.tel{background:#0F0D0B;border-radius:38px;padding:9px;box-shadow:0 24px 50px -18px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.06) inset}
+.tel img{display:block;border-radius:30px;width:100%}
+.tablet{background:#0F0D0B;border-radius:26px;padding:12px;box-shadow:0 24px 50px -22px rgba(0,0,0,.4)}
+.tablet img{display:block;border-radius:15px;width:100%}
+.katla{background:#0F0D0B;border-radius:26px;padding:10px;box-shadow:0 24px 50px -22px rgba(0,0,0,.4);position:relative}
+.katla img{display:block;border-radius:17px;width:100%}
+.katla::after{content:"";position:absolute;top:10px;bottom:10px;left:50%;width:2px;margin-left:-1px;background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.05),rgba(0,0,0,.18))}
+.kagit{border-radius:14px;overflow:hidden;box-shadow:0 18px 40px -20px rgba(0,0,0,.35),0 0 0 1px var(--line)}
+.kagit img{display:block;width:100%}
+
+main{padding-top:12px}
+section{padding-block:44px}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
+.intro{color:var(--body);font-size:17.5px;max-width:60ch;margin:0}
+
+.adimlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px;padding:0;list-style:none;counter-reset:adim}
+@media (max-width:760px){.adimlar{grid-template-columns:1fr}}
+.adimlar li{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px;counter-increment:adim}
+.adimlar li::before{content:counter(adim);display:inline-flex;width:34px;height:34px;border-radius:11px;align-items:center;justify-content:center;background:var(--accent);color:#FFFFFF;font-weight:800;margin-bottom:10px}
+.adimlar b{display:block;font-size:18px;margin-bottom:4px}
+.adimlar span{color:var(--body);font-size:15px}
+
+.ozellik{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.8fr);gap:48px;align-items:center}
+.ozellik.ters{grid-template-columns:minmax(0,.8fr) minmax(0,1fr)}
+.ozellik.ters .gorsel{order:-1}
+@media (max-width:820px){.ozellik,.ozellik.ters{grid-template-columns:1fr;gap:28px}.ozellik.ters .gorsel{order:0}}
+.ozellik .gorsel{display:flex;justify-content:center}
+.ozellik .gorsel .tel{width:min(300px,78%)}
+.ozellik h3{font-size:clamp(24px,3.2vw,32px);margin:0 0 10px}
+.ozellik p{color:var(--body);margin:0 0 14px}
+.liste{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.liste li{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start;color:var(--body)}
+.liste li::before{content:"";width:12px;height:12px;border-radius:4px;margin-top:7px;background:var(--renk,var(--accent))}
+.liste b{color:var(--ink)}
+.not{font-size:14px;color:var(--muted);margin-top:14px}
+.ikili{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:620px){.ikili{grid-template-columns:1fr}}
+
+.cihazlar{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px;margin-top:28px;align-items:end}
+.cihaz{display:grid;gap:12px;justify-items:center;text-align:center}
+.cihaz figcaption{font-size:14.5px;color:var(--body)}
+.cihaz figcaption b{display:block;color:var(--ink);font-size:16px}
+.cihaz figure,figure{margin:0}
+.c-duo{grid-column:span 7}.c-duo-k{grid-column:span 2}.c-tel{grid-column:span 3}
+.c-ipad{grid-column:span 7}.c-and{grid-column:span 5}
+.c-duo-k .tel{width:100%}.c-tel .tel{width:100%}
+.c-and .cift{display:flex;gap:14px;justify-content:center}.c-and .tel{width:48%}
+@media (max-width:900px){.c-duo,.c-ipad,.c-and{grid-column:span 12}.c-duo-k,.c-tel{grid-column:span 6}.c-duo-k .tel,.c-tel .tel{width:min(240px,100%)}}
+
+.kartlar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
+@media (max-width:820px){.kartlar{grid-template-columns:1fr}}
+.kart{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:20px}
+.kart b{display:block;font-size:17.5px;margin-bottom:4px}
+.kart span{color:var(--body);font-size:15px}
+
+.pro{background:var(--dark);color:#FFFFFF;border-radius:28px;padding:clamp(22px,4vw,40px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center}
+@media (max-width:820px){.pro{grid-template-columns:1fr}}
+.pro h2{color:#FFFFFF}
+.pro p{color:var(--on-dark);margin:0 0 10px}
+.pro ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.pro li{display:flex;gap:10px;color:#FFFFFF;font-weight:600}
+.pro li::before{content:"✓";color:var(--accent-on-dark);font-weight:800}
+
+.apps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+@media (max-width:820px){.apps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.apps{grid-template-columns:1fr}}
+.app{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:12px 14px;text-decoration:none;color:var(--ink);min-height:68px}
+.app img{width:44px;height:44px;border-radius:11px;flex:none}
+.app b{display:block;font-size:15.5px}
+.app span{display:block;font-size:13.5px;color:var(--muted);line-height:1.35}
+</style>
+</head>
+<body>
+<div class="hero">
+  <header class="site-head wrap">
+    <a class="brand" href="/"><img src="/logo.svg" alt="" width="40" height="40"><span><b>Projeteklif</b><small>Metraj ve maliyet, cebinde</small></span></a>
+  </header>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1>Projeni yükle, <em>metrajı ve teklifi</em> çıksın.</h1>
+      <p class="lead">Usta ve taşeron için telefondan metraj ve maliyet. Proje dosyasını okur, prizden betona kalemleri tabloya döker, kendi fiyat listenle maliyeti hesaplar, müşterine PDF ve Excel teklif hazırlar.</p>
+      <ul class="chips" aria-label="Okunan dosyalar"><li>DWG</li><li>DXF</li><li>RAR</li><li>ZIP</li><li>Excel</li><li>PDF</li></ul>
+      <div class="soon">Yakında App Store ve Google Play'de <span>iPhone · iPad · Android</span></div>
+      <a class="hero-link" href="#nasil">Nasıl çalışır ↓</a>
+    </div>
+    <div class="hero-phones" aria-hidden="true">
+      <div class="tel"><img src="/ekran/iphone-ana.webp" alt="" width="600" height="1304"></div>
+      <div class="tel"><img src="/ekran/iphone-toplam.webp" alt="" width="600" height="1304"></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section id="nasil">
+    <p class="eyebrow">Üç adımda teklif</p>
+    <h2>Çizimden müşteriye giden teklife</h2>
+    <p class="intro">Saatlerce cetvelle sayılan metraj dakikalar içinde çıkar. Sonra fiyatı ve kâr payını sen belirlersin.</p>
+    <ol class="adimlar">
+      <li><b>Projeni yükle</b><span>DWG, DXF ya da içinde çizimler olan RAR/ZIP. WhatsApp'tan gelen dosyayı "Paylaş → Projeteklif" ile doğrudan aç.</span></li>
+      <li><b>Fiyatını bağla</b><span>Tedarikçinin Excel, CSV ya da PDF listesini yükle; kalemler ürünlerle kendiliğinden eşleşir.</span></li>
+      <li><b>Teklifini gönder</b><span>İşçilik, genel gider ve kâr, KDV eklenir; tek dokunuşla PDF ya da formüllü Excel teklif.</span></li>
+    </ol>
+  </section>
+
+  <section class="ozellik">
+    <div>
+      <p class="eyebrow">Proje okuma</p>
+      <h3>Paftaları ayırır, kalemleri sayar</h3>
+      <p>Tek dosyada birden çok pafta olsa da elektrik, mimari ve statik paftaları ayrı ayrı okur.</p>
+      <ul class="liste">
+        <li style="--renk:var(--elektrik)"><span><b>Elektrik:</b> priz, anahtar, armatür, dedektör, sigorta, kablo ve boru.</span></li>
+        <li style="--renk:var(--ince)"><span><b>Mimari:</b> oda alanları, sıva, boya, seramik, kapı ve pencere, duvar örgüsü.</span></li>
+        <li style="--renk:var(--kaba)"><span><b>Statik:</b> beton, kalıp, demir; temel, perde, merdiven ve dişli döşeme.</span></li>
+      </ul>
+      <p class="not">Çizerin kendine özgü sembol adlarını bir kez seçersin, sonra hatırlar. Şüphede eksik değil fazla sayar: eksik metraj yanıltır, fazlası elde kalan malzemedir.</p>
+    </div>
+    <div class="gorsel"><div class="tel"><img src="/ekran/iphone-metraj.webp" alt="Proje ekranında elektrik kalemleri: armatür, spot, priz, anahtar" width="600" height="1304" loading="lazy"></div></div>
+  </section>
+
+  <section class="ozellik ters">
+    <div class="gorsel"><div class="tel"><img src="/ekran/iphone-toplam.webp" alt="Toplam sekmesi: tahmini maliyet, bölümlere göre tutarlar" width="600" height="1304" loading="lazy"></div></div>
+    <div>
+      <p class="eyebrow">Kendi fiyatınla</p>
+      <h3>Maliyeti senin listen belirler</h3>
+      <p>Uygulamada hazır fiyat yok; fiyat senin. Tedarikçi listeni yüklersin ya da birim fiyatı elle yazarsın.</p>
+      <ul class="liste">
+        <li><span><b>Excel, CSV ve PDF</b> fiyat listesi; on binlerce satırlık listeler de telefonda.</span></li>
+        <li><span><b>Otomatik eşleşme:</b> "Topraklı priz" kalemi listedeki doğru ürünü bulur; emin olmadığında sana sorar.</span></li>
+        <li><span><b>Toplam:</b> işçilik payı, genel gider ve kâr, KDV ve m² başına maliyet.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Teklif</p>
+    <h2>Müşterine hazır teklif</h2>
+    <p class="intro">PDF müşteriye gider; Excel'i düzenlersin. Excel'de tutarlar ve toplamlar formüldür: birim fiyatı ya da oranı değiştirince toplam kendiliğinden güncellenir. Teklifin başına kendi logonu koyabilirsin.</p>
+    <div class="ikili" style="margin-top:26px">
+      <figure class="kagit"><img src="/ekran/teklif-pdf.webp" alt="PDF teklifin ilk sayfası: bölümler, kalemler, miktar, birim fiyat ve tutar" width="900" height="790" loading="lazy"></figure>
+      <figure class="kagit"><img src="/ekran/teklif-excel.webp" alt="Excel teklif: renkli bölüm satırları, ara toplamlar ve formüllü tutarlar" width="1000" height="820" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="ozellik">
+    <div>
+      <p class="eyebrow">Hızlı hesap</p>
+      <h3>Proje yoksa ölçüyü gir</h3>
+      <p>Boya, seramik, sıva, beton ve duvar için ölçüyü yaz; malzeme fişi fireyle birlikte çıkar, tek dokunuşla projeye eklenir. Hızlı hesaplar her zaman ücretsiz.</p>
+      <ul class="liste">
+        <li style="--renk:var(--ince)"><span><b>Seramik:</b> net alan, fireli kutu, yapıştırıcı torbası, derz dolgusu.</span></li>
+        <li style="--renk:var(--elektrik)"><span><b>Boya:</b> kat sayısı, kova, astar.</span></li>
+        <li style="--renk:var(--tesisat)"><span><b>Beton ve duvar:</b> hacim, blok adedi, harç ve yapıştırıcı.</span></li>
+      </ul>
+    </div>
+    <div class="gorsel"><div class="tel"><img src="/ekran/iphone-hesap.webp" alt="Seramik hızlı hesabı: ölçüler ve malzeme fişi" width="600" height="1304" loading="lazy"></div></div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Her ekranda</p>
+    <h2>iPhone, iPhone Duo, iPad ve Android</h2>
+    <p class="intro">Katlanan telefonda açınca iki sütun olur, iPad'de geniş tablo; kapalı dış ekranda da rahat okunur.</p>
+    <div class="cihazlar">
+      <figure class="cihaz c-duo"><div class="katla"><img src="/ekran/duo-acik.webp" alt="iPhone Duo açık: metraj iki sütunda" width="1400" height="985" loading="lazy"></div><figcaption><b>iPhone Duo, açık</b>Metraj iki sütunda</figcaption></figure>
+      <figure class="cihaz c-duo-k"><div class="tel"><img src="/ekran/duo-kapali.webp" alt="iPhone Duo kapalı: dış ekranda ana sayfa" width="560" height="815" loading="lazy"></div><figcaption><b>Duo, kapalı</b>Dış ekran</figcaption></figure>
+      <figure class="cihaz c-tel"><div class="tel"><img src="/ekran/iphone-projeler.webp" alt="iPhone: projeler listesi" width="600" height="1304" loading="lazy"></div><figcaption><b>iPhone</b>Projelerin</figcaption></figure>
+      <figure class="cihaz c-ipad"><div class="tablet"><img src="/ekran/ipad-toplam.webp" alt="iPad yatay: toplam maliyet ve hesap ayarı" width="1400" height="958" loading="lazy"></div><figcaption><b>iPad</b>Toplam maliyet ve hesap ayarı yan yana</figcaption></figure>
+      <figure class="cihaz c-and"><div class="cift"><div class="tel"><img src="/ekran/android-ana.webp" alt="Android: ana sayfa" width="600" height="1333" loading="lazy"></div><div class="tel"><img src="/ekran/android-toplam.webp" alt="Android: toplam maliyet" width="600" height="1333" loading="lazy"></div></div><figcaption><b>Android</b>Ana sayfa ve toplam maliyet</figcaption></figure>
+    </div>
+    <p class="not">Ekran görüntülerindeki projeler, miktarlar ve fiyatlar örnektir.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Gizlilik</p>
+    <h2>Projen senin telefonunda</h2>
+    <div class="kartlar">
+      <div class="kart"><b>Telefonda kalır</b><span>Projelerin, fiyat listelerin ve logon yalnızca telefonunda saklanır. DXF, RAR, ZIP, Excel ve PDF telefonda açılır.</span></div>
+      <div class="kart"><b>DWG Türkiye'de çevrilir</b><span>DWG dosyası DXF'e çevrilmek için Türkiye'deki sunucumuza gider, iş bitince hemen silinir. Saklanmaz, kimseyle paylaşılmaz.</span></div>
+      <div class="kart"><b>Çerez ve reklam yok</b><span>Hesap açtırmaz, izleme ve reklam aracı içermez. Ayrıntısı <a href="/gizlilik/">gizlilik politikasında</a>.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="pro">
+      <div>
+        <p class="eyebrow" style="color:var(--accent-on-dark)">Projeteklif Pro · yakında</p>
+        <h2>Hesap hiçbir zaman kilitlenmez</h2>
+        <p>Bütün hızlı hesaplar, DXF okuma ve ekranda metraj ücretsiz. Pro, teklif çıktısı ve kolaylık özelliklerini açar. Abonelik yalnızca App Store ve Google Play üzerinden; dışarıda ödeme yok.</p>
+      </div>
+      <ul>
+        <li>Excel ve PDF teklif, kendi logonla</li>
+        <li>Fiyat listesiyle otomatik maliyet</li>
+        <li>DWG okuma ve sınırsız proje</li>
+        <li>Bulut yedeği; telefon değişince kaybolmaz</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="font-size:24px">Diğer uygulamalarımız</h2>
+    <div class="apps">
+      <a class="app" href="https://vadelio.com.tr/" target="_blank" rel="noopener"><img src="/apps/vadelio.png" alt="" width="44" height="44"><div><b>Vadelio</b><span>Kredi, çek ve mevduat hesapla</span></div></a>
+      <a class="app" href="https://vitrinly.app/" target="_blank" rel="noopener"><img src="/apps/vitrinly.png" alt="" width="44" height="44"><div><b>Vitrinly</b><span>İlanlarını her gün WhatsApp durumunda paylaş</span></div></a>
+      <a class="app" href="https://bilanly.app/" target="_blank" rel="noopener"><img src="/apps/bilanly.png" alt="" width="44" height="44"><div><b>Bilanly</b><span>Bilançonu sade bir dille yorumla</span></div></a>
+      <a class="app" href="https://endeksly.com/" target="_blank" rel="noopener"><img src="/apps/endeksly.png" alt="" width="44" height="44"><div><b>Endeksly</b><span>Kira artışı, maaşın reel değeri ve emekli zammı</span></div></a>
+      <a class="app" href="https://silkgate.app/" target="_blank" rel="noopener"><img src="/apps/silkgate.png" alt="" width="44" height="44"><div><b>Silkgate</b><span>GTİP ve ithalatta gümrük maliyeti</span></div></a>
+      <a class="app" href="https://foreigntrade.app/" target="_blank" rel="noopener"><img src="/apps/foreigntrade.png" alt="" width="44" height="44"><div><b>foreigntrade.app</b><span>Dış ticareti oynayarak öğren</span></div></a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap site-foot">
+  <span>© 2026 projeteklif.app</span>
+  <a href="/gizlilik/">Gizlilik</a>
+  <a href="/destek/">Destek</a>
+</footer>
+</body>
+</html>

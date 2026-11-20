@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Projeteklif · Metraj ve maliyet, cebinde</title>
-<meta name="description" content="Usta ve taşeron için telefondan metraj, maliyet ve teklif. DWG, DXF, RAR ve ZIP proje dosyasını okur; prizden betona kalemleri tabloya döker, kendi fiyat listenle maliyeti çıkarır, PDF ve Excel teklif hazırlar.">
+<meta name="description" content="Usta ve taşeron için telefondan metraj, maliyet ve teklif. DWG, DXF, PDF, RAR, ZIP ve 7z proje dosyasını okur; prizden betona, kazıdan çatıya kalemleri tabloya döker, kendi fiyat listenle maliyeti çıkarır, PDF ve Excel teklif hazırlar.">
 <meta name="theme-color" content="#1F1B16">
 <meta property="og:title" content="Projeteklif · Metraj ve maliyet, cebinde">
 <meta property="og:description" content="Projeni yükle, metrajı ve maliyeti çıksın. Kendi fiyatınla PDF ve Excel teklif, telefonundan.">
@@ -21,7 +21,7 @@
 <link rel="preload" href="/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Projeteklif","url":"https://projeteklif.app/","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Android","inLanguage":"tr","description":"Telefondan metraj, maliyet ve teklif: DWG, DXF, RAR ve ZIP proje dosyası okuma, fiyat listesi eşleştirme, PDF ve Excel teklif."}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Projeteklif","url":"https://projeteklif.app/","applicationCategory":"BusinessApplication","operatingSystem":"iOS, Android","inLanguage":"tr","description":"Telefondan metraj, maliyet ve teklif: DWG, DXF, PDF, RAR, ZIP ve 7z proje dosyası okuma, fiyat listesi eşleştirme, PDF ve Excel teklif."}
 </script>
 <style>
 /* Açılış bandı: uygulamanın koyu kartı gibi; sağda silik tuğla duvar (logodaki duvar). */
@@ -130,8 +130,8 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
   <div class="wrap hero-grid">
     <div class="hero-text">
       <h1>Projeni yükle, <em>metrajı ve teklifi</em> çıksın.</h1>
-      <p class="lead">Usta ve taşeron için telefondan metraj ve maliyet. Proje dosyasını okur, prizden betona kalemleri tabloya döker, kendi fiyat listenle maliyeti hesaplar, müşterine PDF ve Excel teklif hazırlar.</p>
-      <ul class="chips" aria-label="Okunan dosyalar"><li>DWG</li><li>DXF</li><li>RAR</li><li>ZIP</li><li>Excel</li><li>PDF</li></ul>
+      <p class="lead">Usta ve taşeron için telefondan metraj ve maliyet. Proje dosyasını okur, prizden betona, kazıdan çatıya kalemleri tabloya döker, kendi fiyat listenle maliyeti hesaplar, müşterine PDF ve Excel teklif hazırlar.</p>
+      <ul class="chips" aria-label="Okunan dosyalar"><li>DWG</li><li>DXF</li><li>PDF</li><li>RAR</li><li>ZIP</li><li>7z</li><li>Excel</li></ul>
       <div class="soon">Yakında App Store ve Google Play'de <span>iPhone · iPad · Android</span></div>
       <a class="hero-link" href="#nasil">Nasıl çalışır ↓</a>
     </div>
@@ -148,7 +148,7 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
     <h2>Çizimden müşteriye giden teklife</h2>
     <p class="intro">Saatlerce cetvelle sayılan metraj dakikalar içinde çıkar. Sonra fiyatı ve kâr payını sen belirlersin.</p>
     <ol class="adimlar">
-      <li><b>Projeni yükle</b><span>DWG, DXF ya da içinde çizimler olan RAR/ZIP. WhatsApp'tan gelen dosyayı "Paylaş → Projeteklif" ile doğrudan aç.</span></li>
+      <li><b>Projeni yükle</b><span>DWG, DXF, PDF ya da içinde çizimler olan RAR, ZIP, 7z. WhatsApp'tan gelen dosyayı "Paylaş → Projeteklif" ile doğrudan aç.</span></li>
       <li><b>Fiyatını bağla</b><span>Tedarikçinin Excel, CSV ya da PDF listesini yükle; kalemler ürünlerle kendiliğinden eşleşir.</span></li>
       <li><b>Teklifini gönder</b><span>İşçilik, genel gider ve kâr, KDV eklenir; tek dokunuşla PDF ya da formüllü Excel teklif.</span></li>
     </ol>
@@ -158,13 +158,15 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
     <div>
       <p class="eyebrow">Proje okuma</p>
       <h3>Paftaları ayırır, kalemleri sayar</h3>
-      <p>Tek dosyada birden çok pafta olsa da elektrik, mimari ve statik paftaları ayrı ayrı okur.</p>
+      <p>Tek dosyada birden çok pafta olsa da elektrik, mimari, statik ve mekanik paftaları ayrı ayrı okur.</p>
       <ul class="liste">
         <li style="--renk:var(--elektrik)"><span><b>Elektrik:</b> priz, anahtar, armatür, dedektör, sigorta, kablo ve boru.</span></li>
         <li style="--renk:var(--ince)"><span><b>Mimari:</b> oda alanları, sıva, boya, seramik, kapı ve pencere, duvar örgüsü.</span></li>
         <li style="--renk:var(--kaba)"><span><b>Statik:</b> beton, kalıp, demir; temel, perde, merdiven ve dişli döşeme.</span></li>
+        <li style="--renk:var(--kaba)"><span><b>Temel ve çatı:</b> kazı, geri dolgu ve nakil, temel yalıtımı ve drenaj; kiremit çatı, mantolama.</span></li>
+        <li style="--renk:var(--tesisat)"><span><b>Tesisat:</b> vitrifiye, süzgeç, radyatör, kombi; pis su, temiz su ve doğalgaz boruları.</span></li>
       </ul>
-      <p class="not">Çizerin kendine özgü sembol adlarını bir kez seçersin, sonra hatırlar. Şüphede eksik değil fazla sayar: eksik metraj yanıltır, fazlası elde kalan malzemedir.</p>
+      <p class="not">Neyi tahmin ettiğini kontrol listesinde çizimdeki yeriyle söyler; kazı payı, çatı, mantolama gibi kabulleri değiştirebilirsin. Aynı projenin eski sürümü arşivde duruyorsa iki kez saymaz. Çizerin kendine özgü sembol adlarını bir kez seçersin, sonra hatırlar; PDF çizimde sembolleri dokunarak sayarsın. Şüphede eksik değil fazla sayar: eksik metraj yanıltır, fazlası elde kalan malzemedir.</p>
     </div>
     <div class="gorsel"><div class="tel"><img src="/ekran/iphone-metraj.webp" alt="Proje ekranında elektrik kalemleri: armatür, spot, priz, anahtar" width="600" height="1304" loading="lazy"></div></div>
   </section>
@@ -197,11 +199,12 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
     <div>
       <p class="eyebrow">Hızlı hesap</p>
       <h3>Proje yoksa ölçüyü gir</h3>
-      <p>Boya, seramik, sıva, beton ve duvar için ölçüyü yaz; malzeme fişi fireyle birlikte çıkar, tek dokunuşla projeye eklenir. Hızlı hesaplar her zaman ücretsiz.</p>
+      <p>Boya, seramik, sıva, parke, beton, duvar, kazı, çatı, tesisat, kablo kesiti ve kilitli parke taşı için ölçüyü yaz; malzeme fişi fireyle birlikte çıkar, tek dokunuşla projeye eklenir. Hızlı hesaplar her zaman ücretsiz.</p>
       <ul class="liste">
         <li style="--renk:var(--ince)"><span><b>Seramik:</b> net alan, fireli kutu, yapıştırıcı torbası, derz dolgusu.</span></li>
         <li style="--renk:var(--elektrik)"><span><b>Boya:</b> kat sayısı, kova, astar.</span></li>
-        <li style="--renk:var(--tesisat)"><span><b>Beton ve duvar:</b> hacim, blok adedi, harç ve yapıştırıcı.</span></li>
+        <li style="--renk:var(--kaba)"><span><b>Beton, duvar ve kazı:</b> hacim, blok adedi, harç; kazı, dolgu ve nakil.</span></li>
+        <li style="--renk:var(--tesisat)"><span><b>Tesisat ve kablo:</b> vitrifiye ve sorti, radyatör; gerilim düşümüne göre kablo kesiti.</span></li>
       </ul>
     </div>
     <div class="gorsel"><div class="tel"><img src="/ekran/iphone-hesap.webp" alt="Seramik hızlı hesabı: ölçüler ve malzeme fişi" width="600" height="1304" loading="lazy"></div></div>
@@ -225,7 +228,7 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
     <p class="eyebrow">Gizlilik</p>
     <h2>Projen senin telefonunda</h2>
     <div class="kartlar">
-      <div class="kart"><b>Telefonda kalır</b><span>Projelerin, fiyat listelerin ve logon yalnızca telefonunda saklanır. DXF, RAR, ZIP, Excel ve PDF telefonda açılır.</span></div>
+      <div class="kart"><b>Telefonda kalır</b><span>Projelerin, fiyat listelerin ve logon yalnızca telefonunda saklanır. DXF, PDF, RAR, ZIP, 7z ve Excel telefonda açılır.</span></div>
       <div class="kart"><b>DWG Türkiye'de çevrilir</b><span>DWG dosyası DXF'e çevrilmek için Türkiye'deki sunucumuza gider, iş bitince hemen silinir. Saklanmaz, kimseyle paylaşılmaz.</span></div>
       <div class="kart"><b>Çerez ve reklam yok</b><span>Hesap açtırmaz, izleme ve reklam aracı içermez. Ayrıntısı <a href="/gizlilik/">gizlilik politikasında</a>.</span></div>
     </div>
@@ -236,7 +239,7 @@ h2{font-size:clamp(28px,4.2vw,42px);margin:0 0 12px}
       <div>
         <p class="eyebrow" style="color:var(--accent-on-dark)">Projeteklif Pro · yakında</p>
         <h2>Hesap hiçbir zaman kilitlenmez</h2>
-        <p>Hızlı hesaplar, DXF, DWG, RAR ve ZIP proje okuma, fiyat listesi, toplam maliyet ve proje sayısı sınırsız ve ücretsiz. Pro, müşteriye giden PDF ve Excel teklifi açar; ilk 3 teklif ücretsiz. Satın alma yalnızca App Store ve Google Play üzerinden; dışarıda ödeme yok.</p>
+        <p>Hızlı hesaplar, DWG, DXF, PDF, RAR, ZIP ve 7z proje okuma, fiyat listesi, toplam maliyet ve proje sayısı sınırsız ve ücretsiz. Pro, müşteriye giden PDF ve Excel teklifi açar; ilk 3 teklif ücretsiz. Satın alma yalnızca App Store ve Google Play üzerinden; dışarıda ödeme yok.</p>
       </div>
       <ul>
         <li>Excel ve PDF teklif, kendi logonla</li>
